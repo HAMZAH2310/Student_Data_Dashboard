@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+
+    <header class="bg-blue-600 text-white px-8 py-4 flex items-center shadow-md">
+        <span class="text-xl font-semibold flex items-center gap-2">
+            🎓 Student Dashboard
+        </span>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6 mt-6">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                <h2 class="text-xl font-bold text-blue-700">Daftar Nilai Siswa</h2>
+                
+                <div class="relative w-full md:w-80">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                        🔍
+                    </span>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="Cari nama siswa..." 
+                        class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse text-left text-sm text-gray-700">
+                    <thead>
+                        <tr class="border-b border-gray-200 bg-gray-50 font-semibold text-gray-900">
+                            <th class="px-6 py-3 w-16 text-center">No</th>
+                            <th class="px-6 py-3">Nama Siswa</th>
+                            <th class="px-6 py-3 text-center">Kelas</th>
+                            <th class="px-6 py-3 text-center">Nilai (Score)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-table-body" class="divide-y divide-gray-100">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="mt-6 flex justify-end items-center gap-4 border-t pt-4">
+                <span class="font-medium text-gray-600">Rata-rata Nilai Kelas:</span>
+                <span id="average-score" class="bg-blue-600 text-white font-bold px-4 py-2 rounded-lg text-lg min-w-[60px] text-center">
+                    0
+                </span>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
